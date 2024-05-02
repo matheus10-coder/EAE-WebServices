@@ -1,0 +1,2 @@
+rootProject.name = 'RPAMDMDataService'
+include 'RPAMDMDataServiceEAR'

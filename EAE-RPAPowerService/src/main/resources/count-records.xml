@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://abcbspower/power/webservices/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:count_records soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <workflow xsi:type="xsd:string"></workflow>
+         <queue xsi:type="xsd:string"> </queue>
+         <fields xsi:type="web:fieldValueArray" soapenc:arrayType="web:fieldValue[]">rec_ID</fields>
+         <status xsi:type="xsd:string">A</status>
+      </web:count_records>
+   </soapenv:Body>
+</soapenv:Envelope>

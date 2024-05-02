@@ -1,0 +1,17 @@
+{
+    "resourcePackages": [
+        "net.abcbs.eae.jaxrs"
+    ],
+    "prettyPrint" : true,
+    "cacheTTL": 0,
+    "openAPI": {
+        "info": {
+            "version": "1.0",
+            "title": "RPAStaffingService",
+            "description": "RPAStaffingService is a RESTful API providing comprehensive CRUD functionalities, facilitating the seamless creation, retrieval, updating, and deletion of data entities. Leveraging intuitive endpoints and secure protocols, it emporwers users to efficiently manage resources while ensuring data integrity and reliability. This API has the main goal to support the company efforts towards to the CMWA project.",
+            "contact": {
+                "email": "mfribeiro@arkbluecross.com"
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'eclipse-wtp'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+  	implementation 'javax.ws.rs:javax.ws.rs-api:2.0'
+  	implementation 'javax.servlet:javax.servlet-api:3.1.0'
+	implementation group: 'io.swagger.core.v3', name: 'swagger-jaxrs2', version: '2.1.13'
+  	implementation group: 'io.swagger.core.v3', name: 'swagger-jaxrs2-servlet-initializer-v2', version: '2.1.13'
+	implementation group: 'io.swagger.core.v3', name: 'swagger-integration', version: '2.1.13'
+	implementation group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.1.13'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.18.0'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.18.0'
+	implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '12.4.1.jre8'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+	implementation group: 'commons-dbutils', name: 'commons-dbutils', version: '1.8.1'
+	implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5', version: '5.2.1'
+	implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5-fluent', version: '5.2.1'
+}
+
+group = 'net.abcbs'
+description = 'RPAMDMDataService'
+sourceCompatibility = '1.8'
+war {
+	archiveName = 'RPAMDMDataService.war'
+    manifest {
+		from('src/main/application/META-INF/MANIFEST.MF')
+  	}
+    exclude '**/*.ear'
+}
+
+
+project(":RPAMDMDataServiceEAR") {
+	apply plugin: 'ear'
+	
+	dependencies {
+		deploy project(path:":", configuration:'archives') 
+	}
+	
+	ear {
+		appDirName = '../src/main/application/'
+		archiveName= 'RPAMDMDataServiceEAR.ear'
+		deploymentDescriptor {
+			webModule("RPAMDMDataService.war", "/RPAMDMDataService")
+	  	}
+	  	
+	  	manifest {
+	        from('../src/main/application/META-INF/MANIFEST.MF')
+  		} 
+	} 
+	
+}

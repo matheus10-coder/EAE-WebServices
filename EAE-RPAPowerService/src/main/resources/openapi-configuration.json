@@ -1,0 +1,17 @@
+{
+    "resourcePackages": [
+        "net.abcbs.eae.jaxrs"
+    ],
+    "prettyPrint" : true,
+    "cacheTTL": 0,
+    "openAPI": {
+        "info": {
+            "version": "1.0",
+            "title": "RPAPowerService",
+            "description": "A RESTful web service to interact with POWER's API",
+            "contact": {
+                "email": "EnterpriseAutomationEngineeringTeam@arkbluecross.com"
+            }
+        }
+    }
+}

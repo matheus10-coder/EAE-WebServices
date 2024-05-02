@@ -1,0 +1,17 @@
+{
+    "resourcePackages": [
+        "net.abcbs.eae.jaxrs"
+    ],
+    "prettyPrint" : true,
+    "cacheTTL": 0,
+    "openAPI": {
+        "info": {
+            "version": "1.0",
+            "title": "RPAMDMDataService",
+            "description": "A web service for accessing the Enterprise Layer DB",
+            "contact": {
+                "email": "EnterpriseAutomationEngineeringTeam@arkbluecross.com"
+            }
+        }
+    }
+}

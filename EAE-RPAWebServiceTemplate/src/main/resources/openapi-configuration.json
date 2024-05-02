@@ -1,0 +1,17 @@
+{
+    "resourcePackages": [
+        "net.abcbs.eae.jaxrs"
+    ],
+    "prettyPrint" : true,
+    "cacheTTL": 0,
+    "openAPI": {
+        "info": {
+            "version": "1.0",
+            "title": "RPAWebServiceTemplate",
+            "description": "A RESTful web service template for the EAE team",
+            "contact": {
+                "email": "EnterpriseAutomationEngineeringTeam@arkbluecross.com"
+            }
+        }
+    }
+}
